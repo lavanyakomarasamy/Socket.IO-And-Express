@@ -1,0 +1,77 @@
+<div class = "mdl-layout__tab-panel is-active" id = "agent">
+    <section id="agent-card" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id = "agent">
+        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+            <i class="material-icons">play_circle_filled</i>
+        </header>
+        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card__supporting-text" >
+                <h4><span id="agent-name">Agent</span> - <span id="agent-status">{{status}}</span></h4>
+
+                <form name="form" ng-submit="vm.login()" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+    	                <input class="mdl-textfield__input form-control" type="text" name="username" id="username" ng-model="vm.username" placeholder="User Name" />
+                            <!-- <label for="username">Username</label>
+                            <input type="text" name="username" id="username" class="form-control" ng-model="vm.username" required /> -->
+                              
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                        <input class="mdl-textfield__input form-control" type="password" name="password" id="password" ng-model="vm.password" placeholder="Password" />  
+                            <!-- <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" ng-model="vm.password" required /> -->
+                             
+                    </div>
+                    <div class="form-actions">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="agent-login" ng-click="submit()">Activate</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="mdl-layout__tab-panel" id="work">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="work">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-color-text--white mdl-color--blue-400">
+              <i class="material-icons">phone</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop">
+              <div class="mdl-card mdl-shadow--2dp mdl-textfield--full-width">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Make an outbound call</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <form id="interaction-container" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="text" id="interaction-address">
+                      <label class="mdl-textfield__label" for="interaction-address">Destination Address...</label>
+                    </div>
+                  </form>
+                  <!-- colored raised button with ripple -->
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="start-interaction">
+                    Start
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+<div class="mdl-layout__tab-panel" id="team">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="team">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h3>Team View</h3>
+                <table id="team-view" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-textfield--full-width">
+                  <thead>
+                  <tr>
+                    <th class="mdl-data-table__cell--non-numeric mdl-textfield--full-width">Name</th>
+                    <th class="mdl-data-table__cell--non-numeric">Role</th>
+                    <th>Address</th>
+                  </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>

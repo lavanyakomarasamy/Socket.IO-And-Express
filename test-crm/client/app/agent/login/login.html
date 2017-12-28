@@ -1,0 +1,89 @@
+<div class = "mdl-layout__tab-panel is-active" id = "agent">
+    <section id="agent-card" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+            <i class="material-icons">play_circle_filled</i>
+        </header>
+        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card__supporting-text" >
+                <h4><span id="agent-name">Agent</span> - <span id="agent-status">{{status}}</span></h4>
+
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored hide" id="agent-activate" ng-click="activate()" disabled>
+                  Activate
+                </button>
+
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " id="agent-deactivate" ng-click="deactivate()">
+                  Deactivate
+                </button>
+                <!-- colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " id="agent-login" ng-click="login()">
+                  Login
+                </button>
+                <!-- colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored hide" id="agent-goready" ng-click="goready()">
+                  Go Ready
+                </button>
+                <!-- colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored hide" id="agent-gonotready" ng-click="gonotready()">
+                  Go Not Ready
+                </button>
+                <!-- colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored hide" id="agent-logout" ng-click="logout()">
+                  Log Out
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="resource-card" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Resource Details</h4>
+
+                <div id="resource-voice" class="mdl-cell mdl-cell--3-col ">
+                  <div class="section__circle-container mdl-cell mdl-cell--12-col">
+                    <div class="section__circle-container__circle mdl-color--grey" id="voice">
+                    	<span class="notification-counter hide" id="voiceNotify">1</span>
+                    </div>
+                  </div>
+                  <div class="section__text mdl-cell mdl-cell--12-col">
+                    <h5>Voice - <span>{{status}}</span></h5>
+                  </div>
+                </div>
+                <div id="resource-webchat" class="mdl-cell mdl-cell--3-col ">
+                  <div class="section__circle-container mdl-cell mdl-cell--12-col">
+                    <div class="section__circle-container__circle mdl-color--grey" id="webchat">
+                    	<span class="notification-counter hide" id="webchatNotify">4</span>
+                    </div>
+                  </div>
+                  <div class="section__text mdl-cell mdl-cell--12-col">
+                    <h5>Webchat - <span>{{status}}</span></h5>
+                  </div>
+                </div>
+                <div id="resource-email" class="mdl-cell mdl-cell--3-col ">
+                  <div class="section__circle-container mdl-cell mdl-cell--12-col">
+                    <div class="section__circle-container__circle mdl-color--grey" id="email"></div>
+                  </div>
+                  <div class="section__text mdl-cell mdl-cell--12-col">
+                    <h5>Email - <span>{{status}}</span></h5>
+                  </div>
+                </div>
+                <div id="resource-sms" class="mdl-cell mdl-cell--3-col ">
+                  <div class="section__circle-container mdl-cell mdl-cell--12-col">
+                    <div class="section__circle-container__circle mdl-color--grey" id="sms"></div>
+                  </div>
+                  <div class="section__text mdl-cell mdl-cell--12-col">
+                    <h5>SMS - <span>{{status}}</span></h5>
+                  </div>
+                </div>
+                <div id="resource-social" class="mdl-cell mdl-cell--3-col ">
+                  <div class="section__circle-container mdl-cell mdl-cell--12-col">
+                    <div class="section__circle-container__circle mdl-color--grey" id="social"></div>
+                  </div>
+                  <div class="section__text mdl-cell mdl-cell--12-col">
+                    <h5>Social - <span>{{status}}</span></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "test-crm",
+  "main": "server.js",
+  "author": "lavanyak",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.11",
+    "angular-material": "^1.1.5",
+    "express": "^4.16.0",
+    "material-design-lite": "^1.3.0",
+    "multer": "^1.3.0",
+    "nodemon": "^1.12.1",
+    "socket.io": "^1.3.4"
+  },
+  "description": "AngularJS &amp; Socket.IO (code provided by tutsplus.com)",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
